@@ -13,7 +13,6 @@ describe("Message", function () {
 
 	it('create empty message', function (done) {
 		const msg = messageFactory();
-
 		assert.deepEqual(msg, {
 			"header": {},
 			"hops": [],

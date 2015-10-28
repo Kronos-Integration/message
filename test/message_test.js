@@ -9,9 +9,7 @@ const should = chai.should();
 
 const messageFactory = require('../lib/message');
 
-
 describe("Message", function () {
-
 
 	it('create empty message', function (done) {
 		const msg = messageFactory();

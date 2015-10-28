@@ -7,7 +7,6 @@ const assert = chai.assert;
 const expect = chai.expect;
 const should = chai.should();
 
-const Endpoint = require('../lib/endpoint');
 const messageFactory = require('../lib/message');
 
 

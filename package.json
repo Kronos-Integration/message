@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "clone-deep": "^0.2.2",
-    "merge-light": "0.0.1",
+    "merge-light": "0.0.2",
     "uuid-js": "^0.7.5"
   },
   "devDependencies": {

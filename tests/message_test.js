@@ -7,14 +7,14 @@ const assert = chai.assert;
 const expect = chai.expect;
 const should = chai.should();
 
-const messageFactory = require('../lib/message');
+const messageFactory = require('../index');
 
 describe("Message", function () {
 
 	it('create empty message', function (done) {
-		const msg = messageFactory();
+		const msg = messageFactory.createMessage();
 		assert.deepEqual(msg, {
-			"header": {},
+			"info": {},
 			"hops": [],
 			"payload": {}
 		});
@@ -23,12 +23,15 @@ describe("Message", function () {
 	});
 
 	it('create message with header', function (done) {
-		const msg = messageFactory({
-			"my": "name"
+
+		const msg = messageFactory.createMessage({
+			"info": {
+				"my": "name"
+			}
 		});
 
 		assert.deepEqual(msg, {
-			"header": {
+			"info": {
 				"my": "name"
 			},
 			"hops": [],
@@ -38,15 +41,21 @@ describe("Message", function () {
 		done();
 	});
 
-	it('create message from existing message', function (done) {
-		const msg = messageFactory({
-			"my": "name"
+	it('create message from existing message: overwrite', function (done) {
+		const msg = messageFactory.createMessage({
+			"info": {
+				"my": "name"
+			}
 		});
 
-		const msgNew = messageFactory(undefined, msg);
+		const msgNew = messageFactory.createMessage({
+			"info": {
+				"my": "lastName"
+			}
+		}, msg);
 
 		assert.deepEqual(msgNew, {
-			"header": {
+			"info": {
 				"my": "name"
 			},
 			"hops": [],
@@ -56,5 +65,29 @@ describe("Message", function () {
 		done();
 	});
 
+	it('create message from existing message: merge', function (done) {
+		const msg = messageFactory.createMessage({
+			"info": {
+				"my": "name"
+			}
+		});
+
+		const msgNew = messageFactory.createMessage({
+			"info": {
+				"mylast": "lastName"
+			}
+		}, msg);
+
+		assert.deepEqual(msgNew, {
+			"info": {
+				"my": "name",
+				"mylast": "lastName"
+			},
+			"hops": [],
+			"payload": {}
+		});
+
+		done();
+	});
 
 });

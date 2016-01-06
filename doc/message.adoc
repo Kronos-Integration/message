@@ -5,7 +5,7 @@ The message object is the 'data' object which will be send from step to step.
 [source,js]
 ----
 {
-  "header": {},						<1>
+  "info": {},						  <1>
   "hops": [								<2>
     {
       "time": Date.now(),
@@ -17,7 +17,7 @@ The message object is the 'data' object which will be send from step to step.
   "payload": {}						<3>
 }
 ----
-<1> The header is just a JSON object. It contain what ever. Each step may manipulate the
+<1> The info is just a JSON object. It contain what ever. Each step may manipulate the
 	data. Add new one or delete old one.
 <2> An array of objects. On each step a messages passes a new entry will be added.
 This data could be used to check which way a message comes from, or how long it is underway.

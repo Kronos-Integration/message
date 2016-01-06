@@ -39,7 +39,7 @@ constructor::
 ----
 const messageFactory = require('kronos-step').message;
 
-const newMessage = messageFactory(header, message);
+const newMessage = messageFactory.createMessage(newMessage, originalMessage);
 ----
 
 addHop::

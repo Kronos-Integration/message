@@ -10,7 +10,9 @@ The message object is the 'data' object which will be send from step to step.
     {
       "time": Date.now(),
       "id": uuid.create(4).toString(),
-      "step": stepName,
+      "stepName": stepName,
+  		"stepType": stepType,
+      "endpoint": endpoint,
       "host": os.hostname()
     }
   ],
@@ -47,5 +49,5 @@ addHop::
 +
 [source,js]
 ----
-message.addHop(stepName);
+messageFactory.createMessage(message, stepName, stepType);
 ----

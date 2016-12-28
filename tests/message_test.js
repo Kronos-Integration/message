@@ -7,7 +7,7 @@ const assert = chai.assert;
 const expect = chai.expect;
 const should = chai.should();
 
-const messageFactory = require('../index');
+const messageFactory = require('../dist/message');
 
 describe("Message", function () {
 

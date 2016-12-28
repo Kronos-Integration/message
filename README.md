@@ -20,12 +20,36 @@ kronos-message
 The message object is the 'data' object which will be send from step to step
 
 # API Reference
-{{#modules~}}
-- {{name}}
-{{/modules}}
 
-{{#functions}}* {{>docs}}
-{{/functions}}
+* <a name="createMessage"></a>
+
+## createMessage(newData, oldRequestMessage)
+Creates a new request message structure. It will merge the new data into a copy of the old request.
+Only thf fields 'info' and 'hops' will be copied
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| newData | <code>object</code> | This json is new generated data by the step. It has the follwing structure. 	                       newData : {                           "info" : {},                           "payload" :                         } |
+| oldRequestMessage | <code>object</code> | The request message this step has received |
+
+
+* <a name="addHop"></a>
+
+## addHop(message, stepName, stepType, endpoint)
+Adds a new way point to the message
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| message | <code>object</code> | The message to add the new hop |
+| stepName | <code>string</code> | The name of the current step which issues this way point |
+| stepType | <code>string</code> | The typeName of the step |
+| endpoint | <code>string</code> | The name of endpoint the message is routed through |
+
+
 * * *
 
 install

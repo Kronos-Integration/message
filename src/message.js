@@ -15,7 +15,7 @@ const merge = require('merge-light');
  *                           "payload" :
  *                         }
  *
- * @param oldRequestMessage {object: optional} The request message this step has received
+ * @param oldRequestMessage {object} The request message this step has received
  */
 function createMessage(newData, oldRequestMessage) {
 	let newMessage = {};
@@ -70,5 +70,7 @@ function addHop(message, stepName, stepType, endpoint) {
 	});
 }
 
-module.exports.addHop = addHop;
-module.exports.createMessage = createMessage;
+export {
+	addHop,
+	createMessage
+};

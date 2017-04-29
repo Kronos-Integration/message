@@ -16,6 +16,8 @@
 
 kronos-message
 =====
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Kronos-Integration/kronos-message.svg)](https://greenkeeper.io/)
 The message object is the 'data' object which will be send from step to step
 
 # API Reference

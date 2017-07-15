@@ -8,7 +8,7 @@ const merge = require('merge-light');
 
 /**
  * Creates a new request message structure. It will merge the new data into a copy of the old request.
- * Only thf fields 'info' and 'hops' will be copied
+ * Only the fields 'info' and 'hops' will be copied
  * @param newData {object} This json is new generated data by the step. It has the follwing structure.
  *	                       newData : {
  *                           "info" : {},
@@ -17,7 +17,7 @@ const merge = require('merge-light');
  *
  * @param oldRequestMessage {object} The request message this step has received
  */
-function createMessage(newData, oldRequestMessage) {
+export function createMessage(newData, oldRequestMessage) {
 	let newMessage = {};
 
 	if (oldRequestMessage) {
@@ -59,7 +59,7 @@ function createMessage(newData, oldRequestMessage) {
  * @param stepType {string} The typeName of the step
  * @param endpoint {string} The name of endpoint the message is routed through
  */
-function addHop(message, stepName, stepType, endpoint) {
+export function addHop(message, stepName, stepType, endpoint) {
 	message.hops.push({
 		time: Date.now(),
 		id: uuid.create(4).toString(),
@@ -69,8 +69,3 @@ function addHop(message, stepName, stepType, endpoint) {
 		host: os.hostname()
 	});
 }
-
-export {
-	addHop,
-	createMessage
-};

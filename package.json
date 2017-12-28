@@ -1,9 +1,21 @@
 {
   "name": "kronos-message",
   "version": "0.0.0-semantic-release",
-  "description": "The message object is the 'data' object which will be send from step to step",
-  "module": "src/message.js",
   "main": "dist/message.js",
+  "module": "src/message.js",
+  "description": "The message object is the 'data' object which will be send from step to step",
+  "keywords": [],
+  "contributors": [
+    {
+      "name": "Torsten Link",
+      "email": "torstenlink@gmx.de"
+    },
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
+  "license": "BSD-2-Clause",
   "scripts": {
     "cover": "nyc --temp-directory build/nyc npm test",
     "test": "mocha tests/*-test.js",
@@ -14,14 +26,6 @@
     "posttest": "markdown-doctest",
     "prepare": "rollup -c"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kronos-Integration/kronos-message.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Kronos-Integration/kronos-message/issues"
-  },
-  "homepage": "https://github.com/Kronos-Integration/kronos-message#readme",
   "dependencies": {
     "clone-deep": "^2.0.0",
     "merge-light": "0.0.2",
@@ -36,21 +40,17 @@
     "rollup": "^0.53.0",
     "nyc": "^11.4.1"
   },
-  "contributors": [
-    {
-      "name": "Torsten Link",
-      "email": "torstenlink@gmx.de"
-    },
-    {
-      "name": "Markus Felten",
-      "email": "markus.felten@gmx.de"
-    }
-  ],
-  "license": "BSD-2-Clause",
   "engines": {
     "node": ">=8.9.3"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kronos-Integration/kronos-message.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kronos-Integration/kronos-message/issues"
+  },
+  "homepage": "https://github.com/Kronos-Integration/kronos-message#readme",
   "nyc": {
     "include": [
       "dist/**/*.js"
@@ -60,12 +60,12 @@
     ],
     "report-dir": "./coverage"
   },
+  "xo": {
+    "space": true
+  },
   "template": {
     "repository": {
       "url": "https://github.com/Kronos-Tools/npm-package-template.git"
     }
-  },
-  "xo": {
-    "space": true
   }
 }

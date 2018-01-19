@@ -27,7 +27,7 @@
     "prepare": "rollup -c"
   },
   "dependencies": {
-    "clone-deep": "^2.0.0",
+    "clone-deep": "^3.0.0",
     "merge-light": "0.0.2",
     "uuid-js": "^0.7.5"
   },

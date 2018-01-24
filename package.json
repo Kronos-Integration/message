@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kronos-Integration/kronos-message.git"
+    "url": "https://github.com/Kronos-Integration/kronos-message.git"
   },
   "bugs": {
     "url": "https://github.com/Kronos-Integration/kronos-message/issues"

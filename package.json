@@ -23,7 +23,6 @@
     "precover": "rollup -c",
     "prepare": "rollup -c",
     "pretest": "rollup -c",
-    "semantic-release": "semantic-release",
     "test": "mocha tests/*-test.js"
   },
   "dependencies": {
@@ -33,15 +32,15 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "jsdoc-to-markdown": "^5.0.1",
+    "jsdoc-to-markdown": "^5.0.2",
     "markdown-doctest": "^1.0.0",
     "mocha": "^6.2.1",
     "nyc": "^14.1.1",
-    "rollup": "^1.22.0",
-    "semantic-release": "^15.13.24"
+    "rollup": "^1.26.3",
+    "semantic-release": "^15.13.29"
   },
   "engines": {
-    "node": ">=12.10.0"
+    "node": ">=12.12.0"
   },
   "repository": {
     "type": "git",

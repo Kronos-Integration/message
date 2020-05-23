@@ -1,11 +1,9 @@
 {
-  "name": "kronos-message",
+  "name": "@kronos-integration/message",
   "version": "0.0.0-semantic-release",
-  "main": "dist/message.js",
-  "module": "src/message.js",
+  "main": "./src/message.mjs",
   "description": "The message object is the 'data' object which will be send from step to step",
   "keywords": [
-    "npm-package-template"
   ],
   "contributors": [
     {
@@ -19,13 +17,6 @@
   ],
   "license": "BSD-2-Clause",
   "scripts": {
-    "cover": "nyc --temp-directory build/nyc npm test",
-    "docs": "jsdoc2md -l off -t doc/README.hbs -f src/*.js >README.md",
-    "posttest": "markdown-doctest",
-    "precover": "rollup -c",
-    "prepare": "rollup -c",
-    "pretest": "rollup -c",
-    "test": "mocha tests/*-test.js"
   },
   "dependencies": {
     "clone-deep": "^4.0.0",
@@ -33,13 +24,6 @@
     "uuid-js": "^0.7.5"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "jsdoc-to-markdown": "^5.0.2",
-    "markdown-doctest": "^1.0.0",
-    "mocha": "^7.0.1",
-    "nyc": "^14.1.1",
-    "rollup": "^2.10.0",
-    "semantic-release": "^15.13.31"
   },
   "engines": {
     "node": ">=12.14.0"
@@ -52,21 +36,8 @@
     "url": "https://github.com/Kronos-Integration/kronos-message/issues"
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-message#readme",
-  "nyc": {
-    "include": [
-      "dist/**/*.js"
-    ],
-    "reporter": [
-      "lcov"
-    ],
-    "report-dir": "./coverage"
-  },
-  "xo": {
-    "space": true
-  },
   "template": {
     "repository": {
-      "url": "https://github.com/Kronos-Tools/npm-package-template.git"
     }
   }
 }

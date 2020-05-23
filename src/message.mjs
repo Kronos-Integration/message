@@ -1,6 +1,3 @@
-/* jslint node: true, esnext: true */
-'use strict';
-
 const os = require('os');
 const uuid = require('uuid-js');
 const cloneDeep = require('clone-deep');

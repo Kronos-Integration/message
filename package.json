@@ -1,10 +1,14 @@
 {
   "name": "@kronos-integration/message",
   "version": "0.0.0-semantic-release",
+  "sideEffects": false,
+  "type": "module",
   "main": "./src/message.mjs",
+  "exports": {
+    ".": "./src/message.mjs",
+    "./": "./"
+  },
   "description": "The message object is the 'data' object which will be send from step to step",
-  "keywords": [
-  ],
   "contributors": [
     {
       "name": "Torsten Link",
@@ -17,6 +21,10 @@
   ],
   "license": "BSD-2-Clause",
   "scripts": {
+    "test": "ava --timeout 2m",
+    "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
+    "docs": "documentation readme ./src/message.mjs --section=API",
+    "lint": "documentation lint ./src/message.mjs"
   },
   "dependencies": {
     "clone-deep": "^4.0.0",
@@ -24,20 +32,26 @@
     "uuid-js": "^0.7.5"
   },
   "devDependencies": {
+    "ava": "^3.8.2",
+    "c8": "^7.1.2",
+    "documentation": "^13.0.0",
+    "semantic-release": "^17.0.7"
   },
   "engines": {
     "node": ">=12.14.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kronos-Integration/kronos-message.git"
+    "url": "https://github.com/Kronos-Integration/message.git"
   },
   "bugs": {
-    "url": "https://github.com/Kronos-Integration/kronos-message/issues"
+    "url": "https://github.com/Kronos-Integration/message/issues"
   },
-  "homepage": "https://github.com/Kronos-Integration/kronos-message#readme",
+  "homepage": "https://github.com/Kronos-Integration/message#readme",
   "template": {
-    "repository": {
-    }
+    "inheritFrom": [
+      "arlac77/template-github-action",
+      "arlac77/template-kronos-module"
+    ]
   }
 }

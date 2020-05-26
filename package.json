@@ -5,8 +5,7 @@
   "type": "module",
   "main": "./src/message.mjs",
   "exports": {
-    ".": "./src/message.mjs",
-    "./": "./"
+    ".": "./src/message.mjs"
   },
   "description": "The message object is the 'data' object which will be send from step to step",
   "contributors": [

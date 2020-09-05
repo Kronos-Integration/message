@@ -1,6 +1,9 @@
 {
   "name": "@kronos-integration/message",
   "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
   "sideEffects": false,
   "type": "module",
   "main": "./src/message.mjs",
@@ -8,6 +11,12 @@
     ".": "./src/message.mjs"
   },
   "description": "The message object is the 'data' object which will be send from step to step",
+  "keywords": [
+    "kronos-interceptor",
+    "line",
+    "parser",
+    "stream"
+  ],
   "contributors": [
     {
       "name": "Torsten Link",
@@ -22,19 +31,26 @@
   "scripts": {
     "test": "ava --timeout 2m",
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
-    "docs": "documentation readme ./src/message.mjs --section=API",
-    "lint": "documentation lint ./src/message.mjs"
+    "docs": "documentation readme ./src/line-header-intercetor.mjs --section=API && documentation readme ./src/message.mjs --section=API && documentation readme ./src/module.mjs --section=API && documentation readme ./src/message-handler-interceptor.mjs --section=API && documentation readme ./src/interceptor.mjs --section=API",
+    "lint": "documentation lint ./src/line-header-intercetor.mjs && documentation lint ./src/message.mjs && documentation lint ./src/module.mjs && documentation lint ./src/message-handler-interceptor.mjs && documentation lint ./src/interceptor.mjs"
   },
   "dependencies": {
+    "@kronos-integration/interceptor": "^10.0.1",
+    "@kronos-integration/message": "^2.2.0",
     "clone-deep": "^4.0.0",
     "merge-light": "0.0.2",
-    "uuid-js": "^0.7.5"
+    "moment": "^2.22.2",
+    "uuid-js": "^0.7.5",
+    "z-schema": "4.2.3"
   },
   "devDependencies": {
     "ava": "^3.12.1",
     "c8": "^7.3.0",
     "documentation": "^13.0.2",
-    "semantic-release": "^17.1.1"
+    "esm": "^3.2.25",
+    "loglevel-mixin": "^5.0.3",
+    "semantic-release": "^17.1.1",
+    "underscore": "1.11.0"
   },
   "engines": {
     "node": ">=14.9.0"

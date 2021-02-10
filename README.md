@@ -9,11 +9,11 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/Kronos-Integration/message/badge.svg)](https://snyk.io/test/github/Kronos-Integration/message)
 [![Coverage Status](https://coveralls.io/repos/Kronos-Integration/message/badge.svg)](https://coveralls.io/github/Kronos-Integration/message)
 
-kronos-message
+@kronos-integration/message
 =====
 The message object is the 'data' object which will be send from step to step
 
-# API Reference
+# API
 
 * <a name="createMessage"></a>
 
@@ -52,7 +52,7 @@ install
 With [npm](http://npmjs.org) do:
 
 ```shell
-npm install kronos-message
+npm install @kronos-integration/message
 ```
 
 license

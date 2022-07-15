@@ -1,6 +1,6 @@
 [![npm](https://img.shields.io/npm/v/@kronos-integration/message.svg)](https://www.npmjs.com/package/@kronos-integration/message)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-[![minified size](https://badgen.net/bundlephobia/min/@kronos-integration/message)](https://bundlephobia.com/result?p=@kronos-integration/message)
+[![Open Bundle](https://bundlejs.com/badge-light.svg)](https://bundlejs.com/?q=@kronos-integration/message)
 [![downloads](http://img.shields.io/npm/dm/@kronos-integration/message.svg?style=flat-square)](https://npmjs.org/package/@kronos-integration/message)
 [![GitHub Issues](https://img.shields.io/github/issues/Kronos-Integration/message.svg?style=flat-square)](https://github.com/Kronos-Integration/message/issues)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FKronos-Integration%2Fmessage%2Fbadge\&style=flat)](https://actions-badge.atrox.dev/Kronos-Integration/message/goto)

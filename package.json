@@ -34,7 +34,7 @@
     "uuid-js": "^0.7.5"
   },
   "devDependencies": {
-    "ava": "^6.1.1",
+    "ava": "^6.1.2",
     "c8": "^9.1.0",
     "documentation": "^14.0.3",
     "semantic-release": "^23.0.2"
